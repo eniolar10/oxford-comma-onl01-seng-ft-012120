@@ -1,6 +1,11 @@
 array = ["fiddleheads"]
 def oxford_comma(array)
- if array.length ==2
-array.join (",")
-
+ if array.length == 2
+   array[2] << "and"
+   array.join 
+elseif array.length == 1
+   array.join 
+ elseif array.length > 2
+   array.join << "and"
+ end
 end
